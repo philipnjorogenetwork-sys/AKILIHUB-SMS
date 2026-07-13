@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 207.69 49.62% 25.69%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 207.69 49.62% 25.69%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207.69 49.62% 25.69%;
+
+    --primary: 169.17 98.09% 40.98%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 16% 24%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 14% 22%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 169.17 98.09% 40.98%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 28%;
+    --input: 220 14% 28%;
+    --ring: 169.17 98.09% 40.98%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 207.69 49.62% 25.69%;
+    --sidebar-primary: 169.17 98.09% 40.98%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 169.17 98.09% 40.98%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 14% 20%;
+    --sidebar-ring: 169.17 98.09% 40.98%;
+
+    --success: 169.17 98.09% 40.98%;
+    --success-foreground: 0 0% 100%;
+    --warning: 40 90% 55%;
+    --warning-foreground: 0 0% 10%;
+    --info: 200 80% 55%;
+    --info-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@layer components {
+  button:not([disabled]) {
+    transform: translateY(0);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    will-change: transform;
+  }
+
+  button:not([disabled]):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+}
